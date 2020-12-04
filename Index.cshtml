@@ -1,0 +1,38 @@
+﻿@model ApiTest.Models.GitModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        @using (Html.BeginForm())
+        {
+            <fieldset>
+                <legend></legend>
+
+                <div>
+                    <label asp-for="Login"></label><br />
+                    <input type="text" asp-for="Login" placeholder="Enter login" />
+                </div>
+
+                <p>
+                    <input class="btn btn-success" type="submit" value="Find" />
+                </p>
+            </fieldset>         
+
+            <label class="text-info" asp-for="Id"></label><br />
+            @Html.DisplayFor(modelItem => Model.Id); <br />
+
+            <label class="text-info" asp-for="Followers"></label><br />
+            @Html.DisplayFor(modelItem => Model.Followers); <br />
+
+            <label class="text-info" asp-for="Following"></label><br />
+            @Html.DisplayFor(modelItem => Model.Following); <br />
+
+            <label class="text-info" asp-for="Repo"></label><br />
+            @Html.DisplayFor(modelItem => Model.Repo); <br />
+
+            <label class="text-info" asp-for="DataCreate"></label><br />
+            @Html.DisplayFor(modelItem => Model.DataCreate); <br />                             
+         }    
+    </div>
